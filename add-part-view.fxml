@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softwaretry2.AddPartController">
+   <children>
+      <Button layoutX="373.0" layoutY="339.0" mnemonicParsing="false" text="Save" fx:id="saveButton" onAction="#onSaveButtonClicked" />
+      <Button layoutX="454.0" layoutY="339.0" mnemonicParsing="false" text="Cancel" fx:id="cancelButton" onAction="#onCancelButtonClicked"/>
+      <GridPane layoutX="102.0" layoutY="98.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField GridPane.columnIndex="1" promptText="Auto Generated" editable="false" fx:id="idTextField" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"  fx:id="nameTextField"/>
+            <TextField layoutX="10.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="invTextField" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"  fx:id="priceTextField"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="maxTextField"/>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="labelTextField"/>
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" fx:id="minTextField"/>
+            <Label text="ID" />
+            <Label text="Name" GridPane.rowIndex="1" />
+            <Label text="Inv" GridPane.rowIndex="2" />
+            <Label text="Price/Cost" GridPane.rowIndex="3" />
+            <Label text="Max" GridPane.rowIndex="4" />
+            <Label text="Label" GridPane.rowIndex="5" fx:id="partIdNameLabel"/>
+            <Label alignment="TOP_LEFT" text="Min" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="74.0" layoutY="37.0" text="Add Part">fx:id="associatedPartIdColumn"
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <RadioButton layoutX="228.0" layoutY="46.0" mnemonicParsing="false" text="In-House" fx:id="inHouseRadioButton" onAction="#inHouseRadioButtonClicked"/>
+      <RadioButton layoutX="340.0" layoutY="46.0" mnemonicParsing="false" text="Outsourced" fx:id="outsourcedRadioButton" onAction="#outsourcedRadioButtonClicked"/>
+   </children>
+</AnchorPane>
